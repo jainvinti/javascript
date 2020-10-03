@@ -45,9 +45,8 @@ typeof name
 ```
 
 ### referenec data types
-```
 **object**
-let person = {
+```let person = {
   name: 'vinti'
   lastName: 'jain'
 };
@@ -65,8 +64,9 @@ to access the name property in dynamic way
 let i = 'name';
 person[i] = 'john';
 console.log(person.name);
-
+```
 **array**
+```
 let colors = ['red','blue'];
 console.log(colors); // print both
 console.log(colors[0]); // print red
@@ -76,8 +76,9 @@ colors[2] = 1; // in javascript we can have different types of elements
 //array is object in javascript
 //array have predefined properties like length
 console.log(colors.length); // print 3
-
+```
 **function**
+```
 function greet(name){ // with parameter
   console.log('hello' + name);
 }
