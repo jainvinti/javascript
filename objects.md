@@ -1,1 +1,90 @@
 
+### objects
+```
+// objects in javascript can have any type of data type 
+// all the related variables, function can be put inside the object
+// group related variables, function, object
+// object orianted programming
+
+const circle = {
+ radius: 1,
+ location: {
+  x: 1,
+  y: 1
+ },
+ isVisible: true,
+ draw: function() {
+  console.log('draw');
+ }
+};
+
+circle.draw(); // method
+
+// difference between method and function - if a function is part of object in object programming terms, refer that function as method.
+```
+
+### factory function
+```
+// imagine we want 2 circle object, than we copy the same circle object
+// problem here is that we would have duplicate implementation of draw method
+// suppose is there is bug in draw method than it would present in duplicate draw methods
+// to solve this we use factory or constructor functions
+const circle = {
+ radius: 1,
+ location: {
+  x: 1,
+  y: 1
+ },
+ isVisible: true,
+ draw: function() {
+  console.log('draw');
+ }
+};
+
+const circle2 = {
+ radius: 1,
+ location: {
+  x: 1,
+  y: 1
+ },
+ isVisible: true,
+ draw: function() {
+  console.log('draw'); // duplicate logic 
+ }
+};
+
+------------------------
+// factory function
+// whenever we call createCircle, it will create the circle object
+// however we will pass radius and location 
+function createCircle(radius, location){
+  return {
+   // radius: radius, // in modern javascript if key and value are same, we can make the code shorter by removing the value and simply adding key
+   radius,
+   location: location,
+   isVisible: true,
+   draw: function() { // function can be defined as we define outside object without the keyword function
+    console.log('draw'); 
+   }
+  }
+};
+
+// factory function 
+// beauty of the factory function is that we define the logic in one place, we can call this function with different values or different argument, we get different circle objects
+// if there is bug in logic, will fix in single place
+function createCircle(radius){
+  return {
+   radius,
+   draw() {
+    console.log('draw'); 
+   }
+  }
+};
+
+const circle1 = createCircle(1);
+console.log(circle1);
+console.log(circle1.draw());
+
+const circle2 = createCircle(1);
+console.log(circle2);
+```
