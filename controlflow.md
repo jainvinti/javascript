@@ -1,39 +1,42 @@
 ### if..else
 ```
-if (expression) {
-   Statement(s) to be executed if expression is true
+let i = 5;
+if (i < 5) {
+   console.log('hello world');
 }
-else if (expression){
-  Statement(s) to be executed if expression is true
+else if (i === 5){
+  console.log('hello world');
 }
 else {
-  Statement(s) to be executed if expression is true
+  console.log('hello world');
 }
 ```
 
 ### switch case
 ```
-switch (expression) {
-   case 'condition 1': 
-   statement(s)
+let value = 'A';
+switch (value) {
+   case 'A': 
+   console.log('hello world');
    break;
    
-   case 'condition 2':
-   statement(s)
+   case 'B':
+   console.log('hello world');
    break;
    ...
    
-   case 'condition n':
-   statement(s)
+   case 'C':
+   console.log('hello world');
    break;
    
-   default: statement(s)
+   default: 
+   console.log('hello world');
 }
 ```
 
 ### for loop
 ```
-for(count = 0; count < 10; count++) {
+for(let count = 0; count < 10; count++) {
   console.log('hello world', count);
 }   
 ```
