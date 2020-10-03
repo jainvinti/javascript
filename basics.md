@@ -46,9 +46,41 @@ typeof name
 
 ### referenec data types
 ```
-object
-array
-function
+**object**
+let person = {
+  name: 'vinti'
+  lastName: 'jain'
+};
+console.log(person);
 
+Suppose you want to update the value in person.
+//dot notation
+person.name = 'john'
 
+//bracket notation
+person['name'] = 'john';
+console.log(person.name);
+
+to access the name property in dynamic way
+let i = 'name';
+person[i] = 'john';
+console.log(person.name);
+
+**array**
+let colors = ['red','blue'];
+console.log(colors); // print both
+console.log(colors[0]); // print red
+colors[2] = 'green';
+console.log(colors); // print three colors now
+colors[2] = 1; // in javascript we can have different types of elements
+//array is object in javascript
+//array have predefined properties like length
+console.log(colors.length); // print 3
+
+**function**
+function greet(name){ // with parameter
+  console.log('hello' + name);
+}
+
+greet('john') // call of funtion with argument
 ```
