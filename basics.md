@@ -46,7 +46,8 @@ typeof name
 
 ### referenec data types
 **object**
-```let person = {
+```
+let person = {
   name: 'vinti'
   lastName: 'jain'
 };
