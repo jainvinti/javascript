@@ -85,4 +85,9 @@ function greet(name){ // with parameter
 }
 
 greet('john') // call of funtion with argument
+
+function square(number){
+  return number * number;
+}
+console.log(square(2)); //call of function from log function
 ```
