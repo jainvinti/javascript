@@ -48,7 +48,7 @@ typeof name
 **object**
 ```
 let person = {
-  name: 'vinti'
+  name: 'vinti',
   lastName: 'jain'
 };
 console.log(person);
