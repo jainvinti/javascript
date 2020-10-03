@@ -33,7 +33,7 @@ console.log(x >= 1); //true
 console.log(x < 1); //false
 console.log(x <= 1); //true
 
-//strict equality (same type + same value)
+//strict equality (same type + same value) recommended to use
 console.log(x === 1); //true
 console.log(x !== 1); //false
 console.log(1 === 1); //true
@@ -44,3 +44,43 @@ console.log(1 == 1); //true
 console.log('1' == 1); //true
 console.log(true == 1); //true
 ```
+
+### conditional or ternary operator
+```
+let points = 110;
+let type = points > 100 ? 'gold member' : 'silver member';
+console.log(type);
+```
+
+### logical operators with non booleans
+```
+let highIncome = false;
+let goodCreditScore = false;
+let eligibleForLoan = highIncome || goodCreditScore;
+console.log('eligible', eligibleForLoan);
+let applicationRefused = !eligibleForLoan;
+console.log('application refused', applicationRefused);
+
+let userColor = 'red';
+let defaultColor = 'blue';
+let currentColor = userColor || defaultColor; 
+console.log(currentColor); //red
+
+//it works on falsy and truthy
+//falsy are undefined, null, 0, false, '', NaN
+```
+
+### bitwise operator
+```
+// read     0000100
+// write    0000010
+// execute  0000001
+const readPermission = 4;
+const writePermission = 2;
+const executePermission = 1;
+
+let myPermission = 0;
+myPermission = myPermission | readPermission | writePermission;
+console.log(myPermission); //result 6
+```
+
