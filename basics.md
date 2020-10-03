@@ -1,7 +1,8 @@
 # javascript
 
 ## variables
-'''let name = 'vinti';
+'''
+let name = 'vinti';
 console.log(name);
 
 rules for variable name-
@@ -14,7 +15,9 @@ rules for variable name-
 
 
 ## constants
-'''const keyword is used for constants
+'''
+const keyword is used for constants
 const name = 'vinti';
-console.log(name);'''
+console.log(name);
+'''
 
