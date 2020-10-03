@@ -63,7 +63,7 @@ do {
 ### for in loop
 ```
 let person = {
-  name: 'vinti'
+  name: 'vinti',
   lastName: 'jain'
 };
 
