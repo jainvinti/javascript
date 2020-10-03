@@ -20,7 +20,8 @@ const circle = {
 
 circle.draw(); // method
 
-// difference between method and function - if a function is part of object in object programming terms, refer that function as method.
+// difference between method and function - 
+//if a function is part of object in object programming terms, refer that function as method.
 ```
 
 ### factory function
@@ -59,18 +60,23 @@ const circle2 = {
 // however we will pass radius and location 
 function createCircle(radius, location){
   return {
-   // radius: radius, // in modern javascript if key and value are same, we can make the code shorter by removing the value and simply adding key
+   // radius: radius, 
+   // in modern javascript if key and value are same
+   // we can make the code shorter by removing the value and simply adding key
    radius,
    location: location,
    isVisible: true,
-   draw: function() { // function can be defined as we define outside object without the keyword function
+   // function can be defined as we define outside object without the keyword function
+   draw: function() { 
     console.log('draw'); 
    }
   }
 };
 
 // factory function 
-// beauty of the factory function is that we define the logic in one place, we can call this function with different values or different argument, we get different circle objects
+// beauty of the factory function is that we define the logic in one place,
+// we can call this function with different values or different argument, 
+// we get different circle objects
 // if there is bug in logic, will fix in single place
 function createCircle(radius){
   return {
