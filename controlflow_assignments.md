@@ -17,7 +17,7 @@ function isLandScape (height, width){
 console.log(isLandScape(10,50));
 ```
 
-**output - ** true
+> **output - true**
 ```
 function fizzBuzz(input){
     if (typeof(input) !== 'number')
@@ -35,7 +35,7 @@ function fizzBuzz(input){
 
 console.log(fizzBuzz(5));
 ```
-**output - ** Buzz
+> **output - Buzz**
 ```
 checkspeed(152);
 
@@ -56,7 +56,7 @@ function checkspeed(speed){
     }  
 }
 ```
-**output - ** Licensed Suspended
+> **output - Licensed Suspended**
 
 ```
 showNumbers(10);
@@ -70,7 +70,7 @@ function showNumbers(numbers){
     }
 }
 ```
-**output - **  
+> **output -   
 0 "EVEN"
 1 "ODD"
 2 "EVEN"
@@ -81,7 +81,7 @@ function showNumbers(numbers){
 7 "ODD"
 8 "EVEN"
 9 "ODD"
-10 "EVEN"
+10 "EVEN"**
 
 ```
 const array = [1,2,3,4,5,'',null,undefined];
@@ -96,7 +96,7 @@ function countTruthy(array){
     return count;
 }
 ```
-**output - ** 5
+> **output - 5**
 ```
 const movie = {
     title: 'Titanic',
@@ -113,8 +113,8 @@ function showProperties(obj){
             console.log(key, obj[key]);
 }
 ```
-**output - ** title Titanic
-              actor Rose
+> **output -  title Titanic
+              actor Rose**
 ```
 console.log(sum(10));
 
@@ -126,7 +126,7 @@ function sum(number){
     return sum;
 }
 ```
-**output - ** 33
+> **output - 33**
 ```
 const marks = [80,80,40];
 console.log(clalculateGrade(marks));
@@ -144,6 +144,6 @@ function clalculateGrade(marks){
     return 'A';
 }
 ```
-**output - ** D
+> **output - D**
 
 
