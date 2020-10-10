@@ -145,5 +145,47 @@ function clalculateGrade(marks){
 }
 ```
 > **output - D**
+```
+showStar(5);
 
+function showStar(star){
+    for(let i = 1; i <= star; i++){
+        pattern = '';
+        for(let j =0;j <i;j++)
+            pattern +='#';
+    console.log(pattern);
+    }
+}
+```
+> **output - 
+#<br>
+##<br>
+###<br>
+####<br>
+##### **
+```
+showPrime(20);
 
+function showPrime(limit){
+    for(let number = 2; number <= limit; number ++){
+        let isPrime = true;
+        for(let factor = 2; factor < number; factor++){
+            if(number % factor === 0){
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime)
+            console.log(number);
+    }
+
+}
+```
+> **output - 2
+3
+5
+7
+11
+13
+17
+19**
