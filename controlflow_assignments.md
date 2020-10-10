@@ -7,7 +7,7 @@ function max(num1, num2)
 console.log(max(40,20));
 ```
 
-**output - ** 40
+> **output - ** 40
 
 ```
 function isLandScape (height, width){
