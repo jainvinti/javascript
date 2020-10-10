@@ -152,17 +152,17 @@ function showStar(star){
     for(let i = 1; i <= star; i++){
         pattern = '';
         for(let j =0;j <i;j++)
-            pattern +='#';
+            pattern +='*';
     console.log(pattern);
     }
 }
 ```
 > **output - 
-# <br>
-##<br>
-### <br>
-#### <br>
-#####**
+$ <br>
+$$ <br>
+$$$ <br>
+$$$$ <br>
+$$$$$**
 ```
 showPrime(20);
 
