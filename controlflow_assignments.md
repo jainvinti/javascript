@@ -113,7 +113,7 @@ function showProperties(obj){
             console.log(key, obj[key]);
 }
 ```
-> **output -  title Titanic
+> **output -  title Titanic <br>
               actor Rose**
 ```
 console.log(sum(10));
