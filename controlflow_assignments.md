@@ -158,11 +158,11 @@ function showStar(star){
 }
 ```
 > **output - 
-#<br>
+# <br>
 ##<br>
-###<br>
-####<br>
-##### **
+### <br>
+#### <br>
+#####**
 ```
 showPrime(20);
 
