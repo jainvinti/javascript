@@ -5,17 +5,20 @@ function max(num1, num2)
 }
 
 console.log(max(40,20));
+```
 
 **output - ** 40
 
+```
 function isLandScape (height, width){
     return (width > height) ;
 }
 
 console.log(isLandScape(10,50));
+```
 
 **output - ** true
-
+```
 function fizzBuzz(input){
     if (typeof(input) !== 'number')
        return 'NaN';
@@ -31,9 +34,9 @@ function fizzBuzz(input){
 }
 
 console.log(fizzBuzz(5));
-
+```
 **output - ** Buzz
-
+```
 checkspeed(152);
 
 function checkspeed(speed){
@@ -52,10 +55,10 @@ function checkspeed(speed){
             console.log('Points', points);   
     }  
 }
-
+```
 **output - ** Licensed Suspended
 
-
+```
 showNumbers(10);
 
 function showNumbers(numbers){
@@ -66,7 +69,7 @@ function showNumbers(numbers){
             console.log(i, 'ODD');
     }
 }
-
+```
 **output - **  
 0 "EVEN"
 1 "ODD"
@@ -80,7 +83,7 @@ function showNumbers(numbers){
 9 "ODD"
 10 "EVEN"
 
-
+```
 const array = [1,2,3,4,5,'',null,undefined];
 console.log(countTruthy(array));
 
@@ -92,9 +95,9 @@ function countTruthy(array){
     }
     return count;
 }
-
+```
 **output - ** 5
-
+```
 const movie = {
     title: 'Titanic',
     releaseYear: 2000,
@@ -109,10 +112,10 @@ function showProperties(obj){
         if( typeof obj[key] === 'string')
             console.log(key, obj[key]);
 }
-
+```
 **output - ** title Titanic
               actor Rose
-
+```
 console.log(sum(10));
 
 function sum(number){
@@ -122,9 +125,9 @@ function sum(number){
             sum += i;
     return sum;
 }
-
+```
 **output - ** 33
-
+```
 const marks = [80,80,40];
 console.log(clalculateGrade(marks));
 
@@ -140,7 +143,7 @@ function clalculateGrade(marks){
     if (avg < 90) return 'B';
     return 'A';
 }
-
+```
 **output - ** D
 
-```
+
