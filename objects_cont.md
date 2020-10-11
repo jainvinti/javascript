@@ -132,15 +132,117 @@ increase(obj)
 console.log(obj); // result is 11 as its copied by reference
 
 ```
+### enumerating the properties of object
+```
+const circle = {
+ radius: 1,
+ draw: function() {
+  console.log('draw');
+ }
+};
+
+for(let key in circle)
+  console.log(key, circle[key]); // prints key and its value of circle object
+  
+
+for(let key of circle)
+  console.log(key); // gives error - for of loops can be only used with ittrable like array and maps.
+  //objects are not ittrable
+  
+for(let key of Object.keys(circle)) //Object.keys returns an array of keys, 
+//since arrays are ittrable we can use for of loop
+  console.log(key); 
+  
+Object is builtin constructor function, so somehere we have
+function Object() {} // constructor function
+when ever object is created,
+const x = {value: 1};
+internally its called
+const x = new Object();
+
+for(let entries of Object.entries(circle)) //Object.entries returns an array of keys and value, 
+//since arrays are ittrable we can use for of loop
+  console.log(entries);
+  
+if we wnat to check a particular property existes in object
+
+if ('radius' in circle) console.log('yes'); // prints yes
+```
+
+### cloning of object
+```
+const circle = {
+ radius: 1,
+ draw: function() {
+  console.log('draw');
+ }
+};
+
+const another = {};
+
+for(let key in circle)
+  another[key]= circle[key]; // copying the object
+  
+console.log(another);
 
 
+in modern java script its another method to clone object
+
+const another = Object.assign({}, circle);// copying the object
+
+const another = Object.assign({coloe: 'yellow'}, circle);// new object can also have existing properties or additional properties
+console.log(another);
 
 
+Another simpler and elegant way to clone the object
+const another = { ...circle }; // spread operator   
+console.log(another);
 
+```
+### Garbage Collection
+```
+runs automatically and deallocate the variables. 
+developer have no control over it.
 
+```
+### built in objects - Math , String
+```
 
+```
 
+### Templete Literals
+```
+There are literals
+Object {}
+Boolean true, false
+String '', ""
+Tempelete ``
 
+const name = 'john';
+
+const  another = `HI ${name} ${2 + 3}
+I can write this way without
+using backslash.`
+
+in templetes literals we can put any expression that returns value
+```
+
+### date
+```
+google javascript date - dateString
+const now = new Date();
+const date1 = new Date('May 11 2020 1:00');
+const date2 = new Date(2020, 4, 14, 9 ); // months start with 0 - jan
+
+these date objects have set and get methods:
+
+now.get....
+now.set....
+
+now.toDateString();
+now.toTimeString();
+now.toISOString();
+```
 
 
 
