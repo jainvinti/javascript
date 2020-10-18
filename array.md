@@ -38,5 +38,38 @@ from where the search will begun.
 
 ### finding elements (reference types)
 ```
+const courses = [
+{id: 1, name: 'a'},
+{id: 2, name: 'b'},
+];
 
+console.log(courses.includes({id: 1, name: 'a' }));// will return false
+coz these two different object, two different reference type.
+
+const course = courses.find(function(course){ //  callback function
+  return course.name === 'a'; // return object if found and
+  undefined if not found
+});
+
+const course = courses.findIndex(function(course){ 
+  return course.name === 'a'; // return index or -1
+});
+
+console.log(course); 
+```
+### arrow function
+```
+const courses = [
+{id: 1, name: 'a'},
+{id: 2, name: 'b'},
+];
+
+const course = courses.find(course =>  course.name === 'a');
+
+console.log(course); 
+
+```
+
+### removing elements
+```
 ```
