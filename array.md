@@ -263,4 +263,18 @@ console.log(items);
 
 ### reducing an array
 ```
+const numbers = [1,-1,2,3];
+
+let sum = 0;
+for (let n of numbers)
+  sum += n;
+
+console.log(sum);
+
+//modern way
+const sum = numbers.reduce(
+  (accumulator, currentvalue) => accumulator + currentvalue
+);
+
+console.log(sum);
 ```
