@@ -72,4 +72,18 @@ console.log(course);
 
 ### removing elements
 ```
+const numbers = [1,2,3,4];
+
+const last = numbers.pop(); // remove at end of array
+console.log(numbers); // show the array after removing the last element
+console.log(last); // show the removed element
+
+const first = numbers.shift(); //add at beginning
+console.log(numbers); // show the array after beginning 
+console.log(first); // show the removed element
+
+numbers.splice(2, 1); // 2 is starting position
+0 is how many elements you want to delete
+
+console.log(numbers);
 ```
