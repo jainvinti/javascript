@@ -87,3 +87,180 @@ numbers.splice(2, 1); // 2 is starting position
 
 console.log(numbers);
 ```
+
+### emptying the array
+```
+let numbers = [1,2,3,4];
+let another = numbers; // reference of array
+
+numbers = []; // this solution doesn't work as the number is assigned to another  and it will not be frees by garbage collector
+console.log(numbers);
+console.log(another);
+
+numbers.length = 0; // works for both number and reference
+console.log(numbers);
+console.log(another);
+
+numbers.splice(0, number.length); // works for both number and reference
+console.log(numbers);
+console.log(another);
+
+while (numbers.length > 0) // not approriate solution for cost
+  numbers.pop();
+  
+console.log(numbers);
+console.log(another);
+```
+
+### combining and sclicing array
+```
+const first = [1,2,3];
+const second = [4,5,6];
+
+const combined = first.concat(second);
+
+const sclice = combined.sclice(); // if called with arguments it will return a copy of original array
+
+console.log(combined);
+console.log(sclice);
+```
+
+### the spread operator
+```
+const first = [1,2,3];
+const second = [4.5.6];
+
+const combined = [...first, 'a', ...second, 'b'];
+
+//const copy = combined.sclice();
+const copy = [...combined]; // it will return all the elements of combined array and put them in copy
+
+```
+
+### iterating the array
+```
+const numbers = [1,2,3];
+
+for (let number of numbers)
+  console.log(number)
+  
+numbers.foreach(function(number) {
+  console.log(number);
+});
+
+//using arrow function
+numbers.foreach((number, index)  => console.log(index, number));
+
+```
+
+### joining array
+```
+const numbers = [1,2,3];
+const joined = numbers.join(',');
+console.log(joined);
+
+const message = 'this is my first message';
+const parts = message.split(' ');
+console.log(parts);
+
+const combined = parts.join('-');
+console.log(combined);
+
+```
+
+### sorting array
+```
+const numbers = [2,1,6,5,4];
+numbers.sort();
+console.log(numbers);
+
+numbers.reverse();
+console.log(numbers);
+
+const courses = [
+{id:1, name: 'node.js'},
+{id:2, name: 'javascript'},
+];
+
+//courses.sort();
+
+courses.sort(function(a,b) {
+ //a < b => -1
+ //a > b => 1
+ //a === b => 0
+ const nameA = a.name.toUpperCase();
+ const nameB = b.name.toUpperCase();
+ 
+ if (nameA < nameB) return -1
+ if (nameA > nameB) return 1
+ return 0;
+});
+
+console.log(courses);
+```
+
+### testing elements of array
+```
+const numbers = [1,2,3];
+const numbers1 = [1,-2,3];
+
+const allPositive = numbers.every(function(value) {
+  return value >= 0;
+});
+
+const atLeastOnePositive = numbers1.some(function(value) {
+  return value >= 0;
+});
+
+console.log(allPositive)
+console.log(atLeastOnePositive);
+```
+
+###  filtering array
+```
+const numbers = [1,-1,2,3];
+
+const filtered = number.filter(function(value){
+  return value >= 0;
+});
+
+//using arrow function
+const filtered = number.filter(n => n >= 0);
+
+console.log(filtered);
+```
+
+### mapping an array
+```
+const numbers = [1,-1,2,3];
+
+const filtered = number.filter(n => n >= 0);
+const items = filtered.map(n => '<li>' + n + '</li>')
+
+const html = '<ul>' + items.join('') + '</ul>'; // by default it used comma seperator
+
+//object
+const items = filtered.map(n => {
+  return obj = { value: n };
+});
+//const items = filtered.map(n => obj = { value: n }); won't work
+
+const items = filtered.map(n => obj = ({ value: n }) );
+console.log(html);
+
+
+// cleaner and shorter code
+const numbers = [1,-1,2,3];
+
+const items = numbers
+  .filter(n => n >=0)
+  .map(n => ({ value: n}))
+  .filter(obj => obj.value > 1)
+  .map(obj => obj.value);
+  
+console.log(items);
+```
+
+### reducing an array
+```
+```
